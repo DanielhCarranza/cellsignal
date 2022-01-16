@@ -1,0 +1,9 @@
+boltons
+editdistance
+fastapi
+numpy
+requests
+smart_open
+toml
+tqdm
+timm
