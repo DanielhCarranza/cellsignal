@@ -2,6 +2,12 @@
 data/downloaded
 data/processed
 data/interim
+data/rxrx1/images*
+data/rxrx1/LICENSE
+data/rxrx2/LICENSE
+data/rxrx1/metadata.csv
+data/rxrx2/metadata.csv
+data/rxrx2/rxrx2-dl-embeddings.csv
 
 # Logs
 training/logs
@@ -47,4 +53,5 @@ notebooks/lightning_logs
 lightning_logs/
 
 
-./data/rxrx/images/*
+./data/rxrx1/images/*
+./data/rxrx1/*
