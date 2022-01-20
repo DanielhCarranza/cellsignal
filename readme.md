@@ -3,10 +3,9 @@ description
 
 
 ## Data Layer
-
-Load Data script
+- [] Load Data script
 [] Preprocess image
-- [x] 
+
 
 ## Training Layer
 [] Train resnet baseline
