@@ -24,7 +24,7 @@ An end-to-end implementation of a ML System for morphological profiling using se
 ## Status Update
 ### Data
 - [X] Load Data script
-- [ ] Preprocess image
+- [ ] Preprocess images
 - [ ] Data module 
 
 ### Training
@@ -38,7 +38,10 @@ An end-to-end implementation of a ML System for morphological profiling using se
 ### Testing
 - [ ] linting, syntax, data types.
 - [ ] full training cycle
-- [ ] input, outputs shapes 
+- [ ] input, outputs shapes
+- [ ] single batch and epoch
+- [ ] functionality test: load pretraind and predict with sample examples
+- [ ] evaluation test 
 
 ### Deployment
 - [ ] Setup FastAPI
