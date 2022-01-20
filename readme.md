@@ -26,6 +26,7 @@ An end-to-end implementation of a ML System for morphological profiling using se
 - [X] Load Data script
 - [ ] Preprocess images
 - [ ] Data module 
+- [ ] Data Validation for metadata csv file
 
 ### Training
 - [ ] Train resnet baseline
