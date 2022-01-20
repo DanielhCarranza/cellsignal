@@ -69,9 +69,40 @@ class RxRx1DataModule(pl.LightningDataModule):
         
     def setup(self, stage: Optional[str] = None) -> None:
         """Split data into train, val, test, and set dims"""
+        self.split_size = (0.8, 0.1, 0.1)
+        self.train_set, self.val_set, self.test_set = self.split_data()
     
     def train_dataloader(self):
-        return DataLoader
+        return DataLoader(
+                self.train_set, 
+                batch_size=self.batch_size, 
+                num_workers=self.num_workers, 
+                shuffle=True, 
+                pin_memory=self.on_gpu)
+                
+    def val_dataloader(self):
+        return DataLoader(
+                self.val_set, 
+                batch_size=self.batch_size, 
+                num_workers=self.num_workers, 
+                shuffle=True, 
+                pin_memory=self.on_gpu)
+
+    def test_dataloader(self):
+        return DataLoader(
+                self.test_set, 
+                batch_size=self.batch_size, 
+                num_workers=self.num_workers, 
+                shuffle=True, 
+                pin_memory=self.on_gpu)
+    
+    def split_data(self)->Tuple[torch.utils.data.Dataset, torch.utils.data.Dataset, torch.utils.data.Dataset]:
+        """Split data into train, val, test"""
+        raise NotImplementedError
+    
+    def __len__(self):
+        return len(self.train_set)
+    
 
 
 
